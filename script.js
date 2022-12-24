@@ -7,6 +7,10 @@ function getTranslationUrl(text){
      return serverUrl + "?" + "text=" + text;
 }
 
+function errorHandler(error){
+  console.log("error occured" + error);
+  alert("error occured!!!! server is busy right now please try again later")
+}
 
 btn.addEventListener("click",function clickeventhandler(){
     var inputText = txtinput.value;
@@ -15,6 +19,7 @@ btn.addEventListener("click",function clickeventhandler(){
     .then(response => response.json())
     .then(json =>  {content = json.contents.translated;
                    output.innerText= content; })
+     .catch(errorHandler)
      
 
 
