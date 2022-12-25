@@ -48,10 +48,11 @@ textarea{
     flex-direction: column;
 }
 .output-box{
-    border: solid 1px;
+  border: solid 1px;
     width:50%;
+    max-height:2000px;
+    resize: horizontal;
     padding:20px;
-    height:70px;
 }
 .footer{
     margin-top: 20px;
